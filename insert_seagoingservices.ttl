@@ -1,0 +1,561 @@
+##################################################################################################
+# Tripletter for fartstid-pakker som blir brukt i 'SPARQL_insert_requirements.rq' og 
+# 'SPARQL_insert_renewal_requirements.rq'            
+#
+# Hvis verdien ikke eksisterer eller er spesifisert er den ubegrenset.
+# Feks hvis :daysSinceCompletion ikke eksisterer er det ingen tidsbegrensning på når 
+# fartstiden er fullført.
+#
+##################################################################################################
+
+prefix : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/alternative>
+
+## DECK:
+    :SeagoingService1 a :SeagoingServiceRequirement;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:tradeAreaRank_general "2"^^xsd:minExclusive;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+    
+    :SeagoingService2 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:tradeAreaRank_general "2"^^xsd:minExclusive;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService2a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:tradeAreaRank_general "2"^^xsd:minExclusive .
+
+    :SeagoingService2b a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Mate .
+
+    :SeagoingService2c a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService2d a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService3 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :ChiefOfficer;
+		:tradeAreaRank_general "2"^^xsd:minExclusive;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService3a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :ChiefOfficer;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService4 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:tradeAreaRank_general "2"^^xsd:minExclusive;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService4a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Mate;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService5 a :SeagoingServiceRequirement;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive;
+        :mintradeAreaRank_general "3"^^xsd:minInclusive .
+
+    :SeagoingService5a a :SeagoingServiceRequirement;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive;
+        :tradeAreaRank_general "2"^^xsd:minExclusive .
+
+    :SeagoingService5b a :SeagoingServiceRequirement;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService6 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "6"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive;
+        :mintradeAreaRank_general "3"^^xsd:minInclusive .
+
+    :SeagoingService6a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "6"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive;
+        :tradeAreaRank_general "2"^^xsd:minExclusive .
+
+    :SeagoingService6b a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "6"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+		:vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService7 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+		:vesselWeigthOverall "500"^^xsd:minInclusive .
+
+    :SeagoingService7a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+        :vesselLengthOverall "15"^^xsd:minInclusive;
+		:tradeAreaRank_general "2"^^xsd:minExclusive .
+
+    :SeagoingService7b a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :Cadet_deck;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService8 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :AbleSeafarer_deck;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService9 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "18"^^xsd:minInclusive;
+	    :asOccupation :OrdinarySeafarer;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService9a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "18"^^xsd:minInclusive;
+	    :asOccupation :OrdinarySeafarer .
+
+    :SeagoingService10 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :AbleSeafarerApprentice_deck;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService10a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :AbleSeafarerApprentice_deck .
+
+## MACHINE:
+    :SeagoingService11 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :Engineer;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService12 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Engineer;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService13 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :SecondEngineer;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService14 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+	    :asOccupation :AbleSeafarerApprentice_engine;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService15 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :Cadet_engine;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService16 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "6"^^xsd:minInclusive;
+	    :asOccupation :Cadet_engine;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService17 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+		:asOccupation :AbleSeafarerApprentice_engine;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService18 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+	    :asOccupation :inMachineDepartment;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService19 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :ShipElectrician;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService20 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "36"^^xsd:minInclusive;
+        :asOccupation :ShipElecticianApprentice;
+        :machineForce "750"^^xsd:minInclusive .
+
+    :SeagoingService21 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :ShipElecticianApprentice;
+        :machineForce "750"^^xsd:minInclusive .
+
+## FISH:
+
+    :SeagoingService22 a :SeagoingServiceRequirement;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Mate;
+        :vesselWeigthOverall "500"^^xsd:minInclusive;
+        :onShipType :FishingVessel .
+
+    :SeagoingService23 a :SeagoingServiceRequirement;
+        :duration "18"^^xsd:minInclusive;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService23a a :SeagoingServiceRequirement;
+        :duration "18"^^xsd:minInclusive;
+        :vesselLengthOverall "10.67"^^xsd:minInclusive .
+
+    :SeagoingService24 a :SeagoingServiceRequirement;
+        :duration "6"^^xsd:minInclusive;
+        :asOccupation :Fisherman;
+        :onShipType :FishingVessel;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :SeagoingService24a a :SeagoingServiceRequirement;
+        :duration "6"^^xsd:minInclusive;
+        :asOccupation :Fisherman;
+        :vesselLengthOverall "10.67"^^xsd:minInclusive;
+        :onShipType :FishingVessel .
+
+    :SeagoingService25 a :SeagoingServiceRequirement;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Fisherman;
+        :vesselLengthOverall "10.67"^^xsd:minInclusive;
+        :onShipType :FishingVessel .
+
+# OTHER:
+    :SeagoingService26 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "2"^^xsd:minInclusive;
+        :asOccupation :Fisherman;
+        :onShipType :PolarShip;
+        :vesselLengthOverall "15"^^xsd:minInclusive;
+        :onShipType :FishingVessel .
+
+    :SeagoingService27 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "1"^^xsd:minInclusive;
+        :usesFuel :Gas .
+
+    :SeagoingService28 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :usesFuel :Gas .
+
+    :SeagoingService28a a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :shipType :OilChemicalTanker .
+
+    :SeagoingService28b a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :shipType :OilTanker .
+
+    :SeagoingService28c a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :shipType :ChemicalTanker .
+
+    :SeagoingService28d a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :shipType :GasTanker .
+
+    :SeagoingService29 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :DeckCrewOccupation;
+        :shipType :GasTanker .
+
+    :SeagoingService30 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Occupationpackage2;
+        :shipType :GasTanker .
+
+    :SeagoingService31 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Occupationpackage3;
+        :minvesselWeigthOverall "50"^^xsd:minInclusive .
+
+    :SeagoingService32 a :SeagoingServiceRequirement;
+        :duration "6"^^xsd:minInclusive;
+        :daysSinceCompletion "1825"^^xsd:minInclusive .
+
+# FORNYELSE AV SERTIFIKAT ________________________________________________________________________
+    :VesselRequirements_1_alt1 a :VesselRequirement;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+    :VesselRequirements_1_alt2 a :VesselRequirement;
+        :vesselLengthOverall "10.67"^^xsd:minInclusive;
+        :onShipType :FishingVessel .
+
+    :VesselRequirements_1 a rdf:Alt;
+        rdf:_01 :VesselRequirements_1_alt1;
+        rdf:_02 :VesselRequirements_1_alt2 .
+
+
+
+    :VesselRequirements_2 a :VesselRequirement;
+        :machineForce "750"^^xsd:minInclusive .
+
+
+    :VesselRequirements_3 a :VesselRequirement;
+        :vesselLengthOverall "15"^^xsd:minInclusive .
+
+
+     :VesselRequirements_4 a :VesselRequirement;
+        :vesselLengthOverall "8"^^xsd:minInclusive .
+    
+     :VesselRequirements_5 a :VesselRequirement;
+        :usesFuel :Gas .
+
+    :VesselRequirements_6 a :VesselRequirement;
+        :shipType :OilTanker .
+
+    :VesselRequirements_7 a :VesselRequirement;
+        :shipType :ChemicalTanker .
+
+    :VesselRequirements_8 a rdf:Alt;
+        rdf:_01 :VesselRequirements_1_alt2 .
+
+
+    :SeagoingService_renew_1_alt1 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Shipmaster;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_1_alt2 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :ChiefOfficer;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_1_alt3 a :SeagoingServiceRequirement;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Mate;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_1 a rdf:Alt;
+        rdf:_01 :SeagoingService_renew_1_alt1;
+        rdf:_02 :SeagoingService_renew_1_alt2;
+        rdf:_03 :SeagoingService_renew_1_alt3 .
+
+
+
+    :SeagoingService_renew_2_alt1 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Shipmaster;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_2_alt2 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :ChiefOfficer;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_2_alt3 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Mate;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+    :SeagoingService_renew_2 a rdf:Alt;
+        rdf:_01 :SeagoingService_renew_2_alt1;
+        rdf:_02 :SeagoingService_renew_2_alt2;
+        rdf:_03 :SeagoingService_renew_2_alt3 .
+    
+
+
+    :SeagoingService_renew_3 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :hasVesselRequirement :VesselRequirements_8 .
+
+
+
+    :SeagoingService_renew_4 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :hasVesselRequirement :VesselRequirements_1 .
+
+
+
+    :SeagoingService_renew_5 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Engineer;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+
+
+    :SeagoingService_renew_6_alt1 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :ChiefEngineer;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+    :SeagoingService_renew_6_alt2 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :SecondEngineer;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+    :SeagoingService_renew_6_alt3 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Engineer;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+    :SeagoingService_renew_6 a rdf:Alt;
+        rdf:_01 :SeagoingService_renew_6_alt1;
+        rdf:_02 :SeagoingService_renew_6_alt2;
+        rdf:_03 :SeagoingService_renew_6_alt3 .
+
+
+
+    :SeagoingService_renew_7 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+    :SeagoingService_renew_8 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :ShipElectrician;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+    :SeagoingService_renew_9 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :ShipElectricianOfficer;
+        :hasVesselRequirement :VesselRequirements_2 .
+
+
+
+    :SeagoingService_renew_10_alt1 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Master;
+        :hasVesselRequirement :VesselRequirements_3 .
+
+    :SeagoingService_renew_10_alt1 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :ChiefOfficer;
+        :hasVesselRequirement :VesselRequirements_3 .
+
+    :SeagoingService_renew_10_alt1 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :asOccupation :Mate;
+        :hasVesselRequirement :VesselRequirements_3 .
+    
+    :SeagoingService_renew_10 a rdf:Alt;
+        rdf:_01 :SeagoingService_renew_10_alt1;
+        rdf:_02 :SeagoingService_renew_10_alt2;
+        rdf:_03 :SeagoingService_renew_10_alt3 .
+
+    
+
+        :SeagoingService_renew_11_alt1 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Master;
+        :hasVesselRequirement :VesselRequirements_3 .
+
+    :SeagoingService_renew_11_alt1 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :ChiefOfficer;
+        :hasVesselRequirement :VesselRequirements_3 .
+
+    :SeagoingService_renew_11_alt1 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :asOccupation :Mate;
+        :hasVesselRequirement :VesselRequirements_3 .
+    
+    :SeagoingService_renew_11 a rdf:Alt;
+        rdf:_01 :SeagoingService_renew_11_alt1;
+        rdf:_02 :SeagoingService_renew_11_alt2;
+        rdf:_03 :SeagoingService_renew_11_alt3 .
+
+
+
+    :SeagoingService_renew_12 a :SeagoingService;
+        :daysSinceCompletion "183"^^xsd:maxExclusive;
+        :hasVesselRequirement :VesselRequirements_3 .
+
+
+    :SeagoingService_renew_13 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive;
+        :hasVesselRequirement :VesselRequirements_4 .
+
+
+    :SeagoingService_renew_14 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "2"^^xsd:minInclusive;
+        :asOccupation :Mate .
+
+
+    :SeagoingService_renew_15 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :hasVesselRequirement :VesselRequirements_5 .
+
+    :SeagoingService_renew_16 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :hasVesselRequirement :VesselRequirements_6 .
+
+    :SeagoingService_renew_17 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "3"^^xsd:minInclusive;
+        :hasVesselRequirement :VesselRequirements_7 .
+
+    :SeagoingService_renew_18 a :SeagoingService;
+        :daysSinceCompletion "1825"^^xsd:maxExclusive;
+        :duration "12"^^xsd:minInclusive .

@@ -1,0 +1,866 @@
+##################################################################################################
+# Tripletter for sertifikatkrav ved fornyelse av sertifikater.                       
+#
+##################################################################################################
+
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/alternative>
+
+
+# DEKK______________________________________________________________________________
+
+
+    :D10_renew_alt1 :renewalRequirementsFor :D10;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D10;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D10, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D10_renew_alt2 :renewalRequirementsFor :D10;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D10;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D10, alternativ 2";
+		:hasSeagoingServiceRequirementRequirement :SeagoingService_renew_2 .
+
+    :D10_renew_alt4 :renewalRequirementsFor :D10;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D10;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D10, alternativ 3";
+        :hasSeagoingServiceRequirementRequirement :SeagoingService_renew_3 .
+
+    :D10_renew_Requirements a rdf:Alt;
+		rdf:_01 :D10_renew_lt1;
+		rdf:_02 :D10_renew_alt2;
+        rdf:_04 :D10_renew_alt4 .
+
+
+
+    :D1BG0_renew_alt1 :renewalRequirementsFor :D1BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D1BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D1BG0, alternativ 1";
+		:hasSeagoingServiceRequirementRequirement :SeagoingService_renew_1 .
+
+    :D1BG0_renew_alt2 :renewalRequirementsFor :D1BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate,:D1BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D1BG0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D1BG0_renew_alt4 :renewalRequirementsFor :D1BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D1BG0;
+        :requiresCourse :AdvancedSafetyCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D1BG0, alternativ 4";
+        :hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D1BG0_renew_Requirements a rdf:Alt;
+		rdf:_01 :D1BG0_renew_alt1;
+		rdf:_02 :D1BG0_renew_alt2;
+        rdf:_02 :D1BG0_renew_alt4 .
+
+
+
+    :D2B0_renew_alt1 :renewalRequirementsFor :D2B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D2B0_renew_alt2 :renewalRequirementsFor :D2B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D2B0_renew_alt4 :renewalRequirementsFor :D2B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D2B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D2B0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D2B0_renew_alt1;
+        rdf:_02 :D2B0_renew_alt2;
+        rdf:_04 :D2B0_renew_alt4 .
+
+
+
+    :D2BG0_renew_alt1 :renewalRequirementsFor :D2BBG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D2BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D2BG0_renew_alt2 :renewalRequirementsFor :D2BBG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D2BG0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D2BG0_renew_alt4 :renewalRequirementsFor :D2BBG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2BG0;
+        :requiresCourse :AdvancedSafetyCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D2BG0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D2BG0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D2BG0_renew_alt1;
+        rdf:_02 :D2BG0_renew_alt2;
+        rdf:_04 :D2BG0_renew_alt4 .
+
+
+
+    :D2A0_renew_alt1 :renewalRequirementsFor :D2A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2A0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D2A0_renew_alt2 :renewalRequirementsFor :D2A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2A0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D2A0_renew_alt4 :renewalRequirementsFor :D2A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D2A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D2A0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+		
+    :D2A0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D2A0_renew_alt1;
+        rdf:_02 :D2A0_renew_alt2;
+        rdf:_04 :D2A0_renew_alt4 .
+
+
+
+    :D3B0_renew_alt1 :renewalRequirementsFor :D3B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D3B0_renew_alt2 :renewalRequirementsFor :D3B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3B0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D3B0_renew_alt4 :renewalRequirementsFor :D3B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D3B0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D3B0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D3B0_renew_alt1;
+        rdf:_02 :D3B0_renew_alt2;
+        rdf:_04 :D3B0_renew_alt4 .
+
+
+
+    :D3A0_renew_alt1 :renewalRequirementsFor :D3A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3A0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D3A0_renew_alt2 :renewalRequirementsFor :D3A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3A0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D3A0_renew_alt4 :renewalRequirementsFor :D3A0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3A0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D3A0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D3A0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D3A0_renew_alt1;
+        rdf:_02 :D3A0_renew_alt2;
+        rdf:_04 :D3A0_renew_alt4 .
+
+
+
+    :D3D0_renew_alt1 :renewalRequirementsFor :D3D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3D0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3D0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D3D0_renew_alt2 :renewalRequirementsFor :D3D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3D0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3A0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D3D0_renew_alt4 :renewalRequirementsFor :D3D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3D0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D3D0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D3D0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D3D0_renew_alt1;
+        rdf:_02 :D3D0_renew_alt2;
+        rdf:_04 :D3D0_renew_alt4 .
+
+
+
+    :D3BG0_renew_alt1 :renewalRequirementsFor :D3D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3D0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D3BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D3BG0_renew_alt2 :renewalRequirementsFor :D3BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D3BG0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D3BG0_renew_alt4 :renewalRequirementsFor :D3BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D3BG0;
+        :requiresCourse :AdvancedSafetyCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D3BG0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D3BG0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D3BG0_renew_alt1;
+        rdf:_02 :D3BG0_renew_alt2;
+        rdf:_04 :D3BG0_renew_alt4 .
+
+
+
+    :D4B0_renew_alt1 :renewalRequirementsFor :D4B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D4B0_renew_alt2 :renewalRequirementsFor :D4B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4B0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D4B0_renew_alt4 :renewalRequirementsFor :D4B0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4B0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D4B0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D4B0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D4B0_renew_alt1;
+        rdf:_02 :D4B0_renew_alt2;
+        rdf:_04 :D4B0_renew_alt4 .
+
+    
+
+    :D4D0_renew_alt1 :renewalRequirementsFor :D4D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4D0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D4D0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D4D0_renew_alt2 :renewalRequirementsFor :D4D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4D0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D4D0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D4D0_renew_alt4 :renewalRequirementsFor :D4D0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4D0;
+        :requiresCourse :AdvancedSafetyCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D4D0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D4D0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D4D0_renew_alt1;
+        rdf:_02 :D4D0_renew_alt2;
+        rdf:_04 :D4D0_renew_alt4 .
+
+
+
+    :D4F0_renew_alt1 :renewalRequirementsFor :D4F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4F0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D4F0_renew_alt2 :renewalRequirementsFor :D4F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4F0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D4F0_renew_alt4 :renewalRequirementsFor :D4F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D4F0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D4F0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D4F0_renew_alt1;
+        rdf:_02 :D4F0_renew_alt2;
+        rdf:_04 :D4F0_renew_alt4 .
+
+
+
+    :D50_renew_alt1 :renewalRequirementsFor :D50;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D50;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D50, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D50_renew_alt2 :renewalRequirementsFor :D50;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D50;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D50, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D50_renew_alt4 :renewalRequirementsFor :D50;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D50;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D50, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D50_renew_Requirements a rdf:Alt;
+        rdf:_01 :D50_renew_alt1;
+        rdf:_02 :D50_renew_alt2;
+        rdf:_04 :D50_renew_alt4 .
+
+
+
+    :D5F0_renew_alt1 :renewalRequirementsFor :D5F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D5F0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D5F0_renew_alt2 :renewalRequirementsFor :D5F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D5F0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D5F0_renew_alt4 :renewalRequirementsFor :D5F0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5F0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D5F0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D5F0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D5BG0_renew_alt1;
+        rdf:_02 :D5BG0_renew_alt2;
+        rdf:_04 :D5BG0_renew_alt4 .
+
+
+
+    :D5BG0_renew_alt1 :renewalRequirementsFor :D5BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D5BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_1 .
+
+    :D5BG0_renew_alt2 :renewalRequirementsFor :D5BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5BG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D5BG0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_2 .
+
+    :D5BG0_renew_alt4 :renewalRequirementsFor :D5BG0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D5BG0;
+        :requiresCourse :AdvancedSafetyCourse, :ProfessionalCompetenceOfficerCourse;
+        rdf:label "D5BG0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_4 .
+
+    :D5BG0_renew_Requirements a rdf:Alt;
+        rdf:_01 :D5BG0_renew_alt1;
+        rdf:_02 :D5BG0_renew_alt2;
+        rdf:_04 :D5BG0_renew_alt4 .
+
+
+# MASKIN OG SKIPSELEKTRIKER ______________________________________________________________________________
+
+    :M1M0_renew_alt1 :renewalRequirementsFor :M1M0;
+        :requiresCertificate :HealthCertificate, :M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M1M0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_5 .
+
+    :M1M0_renew_alt2 :renewalRequirementsFor :M1M0;
+        :requiresCertificate :HealthCertificate, :M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M1M0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_6 .
+
+    :M1M0_renew_alt3 :renewalRequirementsFor :M1M0;
+        :requiresCertificate :HealthCertificate, :M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDMAS;
+        rdf:label "M1M0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :M1M0_renew_alt4 :renewalRequirementsFor :M1M0;
+        :requiresCertificate :HealthCertificate, :M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse, :VYM;
+        rdf:label "M1M0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :M1M0_renew_Requirements a rdf:Alt;
+        rdf:_01 :M1M0_renew_alt1;
+        rdf:_02 :M1M0_renew_alt2;
+        rdf:_03 :M1M0_renew_alt3;
+        rdf:_04 :M1M0_renew_alt4 .
+
+
+
+    :M2AM0_renew_alt1 :renewalRequirementsFor :M2AM0;
+        :requiresCertificate :HealthCertificate, :M2AM0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M2AM0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_5 .
+
+    :M2AM0_renew_alt2 :renewalRequirementsFor :M2AM0;
+        :requiresCertificate :HealthCertificate, :M2AM0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M2AM0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_6 .
+
+    :M2AM0_renew_alt3 :renewalRequirementsFor :M2AM0;
+        :requiresCertificate :HealthCertificate, :M2AM0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDMAS;
+        rdf:label "M2AM0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :M2AM0_renew_alt4 :renewalRequirementsFor :M2AM0;
+        :requiresCertificate :HealthCertificate, :M2AM0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse, :VYM;
+        rdf:label "M2AM0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :M2AM0_renew_Requirements a rdf:Alt;
+        rdf:_01 :M2AM0_renew_alt1;
+        rdf:_02 :M2AM0_renew_alt2;
+        rdf:_03 :M2AM0_renew_alt3;
+        rdf:_04 :M2AM0_renew_alt4 .
+
+
+
+    :M3AM0_renew_alt1 :renewalRequirementsFor :M3AM0;
+        :requiresCertificate :HealthCertificate, :M3AM0;
+        :requiresEducation :VM3;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M3AM0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_5 .
+
+    :M3AM0_renew_alt2 :renewalRequirementsFor :M3AM0;
+        :requiresCertificate :HealthCertificate, :M3AM0;
+        :requiresEducation :VM3;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M3AM0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_6 .
+
+    :M3AM0_renew_alt3 :renewalRequirementsFor :M3AM0;
+        :requiresCertificate :HealthCertificate, :M3AM0;
+        :requiresEducation :VM3;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDMAS;
+        rdf:label "M3AM0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :M3AM0_renew_alt4 :renewalRequirementsFor :M3AM0;
+        :requiresCertificate :HealthCertificate, :M3AM0;
+        :requiresEducation :VM3;
+        :requiresCourse :AdvancedSafetyCourse, :VYM;
+        rdf:label "M3AM0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :M3AM0_renew_Requirements a rdf:Alt;
+        rdf:_01 :M3AM0_renew_alt1;
+        rdf:_02 :M3AM0_renew_alt2;
+        rdf:_03 :M3AM0_renew_alt3;
+        rdf:_04 :M3AM0_renew_alt4 .
+
+
+
+    :M4M0_renew_alt1 :renewalRequirementsFor :M4M0;
+        :requiresCertificate :HealthCertificate, :M4M0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M4M0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_5 .
+
+    :M4M0_renew_alt2 :renewalRequirementsFor :M4M0;
+        :requiresCertificate :HealthCertificate, :M4M0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M4M0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_6 .
+
+    :M4M0_renew_alt3 :renewalRequirementsFor :M4M0;
+        :requiresCertificate :HealthCertificate, :M4M0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDMAS;
+        rdf:label "M4M0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :M4M0_renew_alt4 :renewalRequirementsFor :M4M0;
+        :requiresCertificate :HealthCertificate, :M4M0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :VYM;
+        rdf:label "M4M0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :M4M0_renew_Requirements a rdf:Alt;
+        rdf:_01 :M4M0_renew_alt1;
+        rdf:_02 :M4M0_renew_alt2;
+        rdf:_03 :M4M0_renew_alt3;
+        rdf:_04 :M4M0_renew_alt4 .
+
+
+
+    :M4AM0_renew_alt1 :renewalRequirementsFor :M4AM0;
+        :requiresCertificate :HealthCertificate, :M4AM0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M4AM0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_5 .
+
+    :M4AM0_renew_alt2 :renewalRequirementsFor :M4AM0;
+        :requiresCertificate :HealthCertificate, :M4AM0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "M4AM0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_6 .
+
+    :M4AM0_renew_alt3 :renewalRequirementsFor :M4AM0;
+        :requiresCertificate :HealthCertificate, :M4AM0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDMAS;
+        rdf:label "M4AM0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :M4AM0_renew_alt4 :renewalRequirementsFor :M4AM0;
+        :requiresCertificate :HealthCertificate, :M4AM0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :VYM;
+        rdf:label "M4AM0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :M4AM0_renew_Requirements a rdf:Alt;
+        rdf:_01 :M4AM0_renew_alt1;
+        rdf:_02 :M4AM0_renew_alt2;
+        rdf:_03 :M4AM0_renew_alt3;
+        rdf:_04 :M4AM0_renew_alt4 .
+
+
+
+    :SEOF0_renew_alt1 :renewalRequirementsFor :SEOF0;
+        :requiresCertificate :HealthCertificate, :SEOF0;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "SEOF0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_8 .
+
+    :SEOF0_renew_alt2 :renewalRequirementsFor :SEOF0;
+        :requiresCertificate :HealthCertificate, :SEOF0;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "SEOF0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_9 .
+
+    :SEOF0_renew_alt3 :renewalRequirementsFor :SEOF0;
+        :requiresCertificate :HealthCertificate, :SEOF0;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasAttachement :VEDEL;
+        rdf:label "SEOF0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .
+
+    :SEOF0_renew_alt4 :renewalRequirementsFor :SEOF0;
+        :requiresCertificate :HealthCertificate, :SEOF0;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse, :VYE;
+        rdf:label "SEOF0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_7 .   
+
+    :SEOF0_renew_Requirements a rdf:Alt;
+        rdf:_01 :SEOF0_renew_alt1;
+        rdf:_02 :SEOF0_renew_alt2;
+        rdf:_03 :SEOF0_renew_alt3;
+        rdf:_04 :SEOF0_renew_alt4 .
+    
+# FISK ______________________________________________________________________________
+
+    :FSAA0_renew_alt1 :renewalRequirementsFor :FSAA0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSAA0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSAA0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_10 .
+
+    :FSAA0_renew_alt2 :renewalRequirementsFor :FSAA0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSAA0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSAA0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_11 .
+
+
+    :FSAA0_renew_alt4 :renewalRequirementsFor :FSAA0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_Fish_renewal, :FSAA0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSAA0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_12 .   
+
+    :FSAA0_renew_Requirements a rdf:Alt;
+        rdf:_01 :FSAA0_renew_alt1;
+        rdf:_02 :FSAA0_renew_alt2;
+        rdf:_04 :FSAA0_renew_alt4 .
+
+
+
+    :FSAB1_renew_alt1 :renewalRequirementsFor :FSAB1;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSAB1;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "FSAB1, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_10 .
+
+    :FSAB1_renew_alt2 :renewalRequirementsFor :FSAB1;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSAB1;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "FSAB1, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_11 .
+
+
+    :FSAB1_renew_alt4 :renewalRequirementsFor :FSAB1;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_Fish_renewal, :FSAB1;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "FSAB1, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_12 .   
+
+    :FSAB1_renew_Requirements a rdf:Alt;
+        rdf:_01 :FSAB1_renew_alt1;
+        rdf:_02 :FSAB1_renew_alt2;
+        rdf:_04 :FSAB1_renew_alt4 .
+
+
+
+    :FSB0_renew_alt1 :renewalRequirementsFor :FSB0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSB0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSB0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_10 .
+
+    :FSB0_renew_alt2 :renewalRequirementsFor :FSB0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FSB0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSB0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_11 .
+
+
+    :FSB0_renew_alt4 :renewalRequirementsFor :FSB0;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_Fish_renewal, :FSB0;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSB0, alternativ 4";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_12 .   
+
+    :FSB0_renew_Requirements a rdf:Alt;
+        rdf:_01 :FSB0_renew_alt1;
+        rdf:_02 :FSB0_renew_alt2;
+        rdf:_04 :FSB0_renew_alt4 .
+
+
+
+    :FSC0_renew_alt1 :renewalRequirementsFor :FSC0;
+        :requiresCertificate :HELD5L, :RadioOperatorCertificate, :FSC0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "FSC0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_11 .
+
+    :FSC0_renew_alt3 :renewalRequirementsFor :FSC0;
+        :requiresCertificate :HELD5L, :RadioOperatorCertificate, :FSC0;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "FSC0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService_renew_10 .
+
+    :FSC0_renew_Requirements a rdf:Alt;
+        rdf:_01 :FSC0_alt1;
+        rdf:_03 :FSC0_alt3 .
+
+
+
+# ANDRE (ferdighetssertifikat) ______________________________________________________________________________
+    
+    :POLG_renew_alt1 :renewalRequirementsFor :POLG;
+        :requiresCertificate :HealthCertificate, :PolarCertificate, :POLG;
+        :requiresCompetancy :POL;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_14;
+        rdf:label "POLG, alternativ 1" .
+
+    :POLG_renew_alt2 :renewalRequirementsFor :POLG;
+        :requiresCertificate :HealthCertificate, :POLG;
+        :requiresCourse :POLA;
+        rdf:label "POLG, alternativ 2" .
+
+    :POLG_renew_Requirements a rdf:Alt;
+        rdf:_01 :POLG_renew_alt1;
+        rdf:_02 :POLG_renew_alt2 .
+
+    
+
+    :POlV_renew_alt1 :renewalRequirementsFor :POLV;
+        :requiresCertificate :HealthCertificate, :PolarCertificate, :POLV;
+        :requiresCompetancy :POL;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_14;
+        rdf:label "POLV, alternativ 1" .
+    
+    :POlV_renew_alt2 :renewalRequirementsFor :POLV;
+        :requiresCertificate :HealthCertificate, :POLV;
+        :requiresCourse :POLA, :POLB;
+        rdf:label "POLV, alternativ 2" .
+
+    :POLV_renew_Requirements a rdf:Alt;
+        rdf:_01 :POLV_renew_alt1;
+        rdf:_02 :POLV_renew_alt2 .
+
+
+    
+    :IGFG_renew_alt1 :renewalRequirementsFor :IGFG;
+        :requiresCertificate :HealthCertificate, :IGFG;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_15 .
+
+    :IGFG_renew_alt2 :renewalRequirementsFor :IGFG;
+        :requiresCertificate :HealthCertificate, :IGFG;
+        :requiresCourse :AdvancedSafetyCourse, :IGFB .
+
+    :IGFG_renew_Requirements a rdf:Alt;
+        rdf:_01 :IGFG_renew_alt1;
+        rdf:_02 :IGFG_renew_alt2 .
+
+    
+
+    :IGFV_renew_alt1 :renewalRequirementsFor :IGFV;
+        :requiresCertificate :HealthCertificate, :IGFV;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_15 .
+
+    :IGFV_renew_alt2 :renewalRequirementsFor :IGFV;
+        :requiresCertificate :HealthCertificate, :IGFV;
+        :requiresCourse :AdvancedSafetyCourse, :IGFA .
+
+    :IGFV_renew_Requirements a rdf:Alt;
+        rdf:_01 :IGFV_renew_alt1;
+        rdf:_02 :IGFV_renew_alt2 .
+
+
+
+    :THO0_renew_alt1 :renewalRequirementsFor :THO0;
+        :requiresCertificate :HealthCertificate, :THO0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_16 .
+
+    :THO0_renew_alt2 :renewalRequirementsFor :THO0;
+        :requiresCertificate :HealthCertificate, :THO0;
+        :requiresCourse :AdvancedSafetyCourse, :TMKOH .
+
+    :THO0_renew_Requirements a rdf:Alt;
+        rdf:_01 :THO0_renew_alt1;
+        rdf:_02 :THO0_renew_alt2 .
+
+
+
+    :THK0_renew_alt1 :renewalRequirementsFor :THK0;
+        :requiresCertificate :HealthCertificate, :THK0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_16 .
+
+    :THK0_renew_alt2 :renewalRequirementsFor :THK0;
+        :requiresCertificate :HealthCertificate, :THK0;
+        :requiresCourse :AdvancedSafetyCourse, :TMKKH .
+
+    :THK0_renew_Requirements a rdf:Alt;
+        rdf:_01 :THK0_renew_alt1;
+        rdf:_02 :THK0_renew_alt2 .
+
+
+
+    :THOKP0_renew_alt1 :renewalRequirementsFor :THOKP0;
+        :requiresCertificate :HealthCertificate, :THOKP0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_16,  :SeagoingService_renew_17.
+
+    :THOKP0_renew_alt2 :renewalRequirementsFor :THOKP0;
+        :requiresCertificate :HealthCertificate, :THOKP0;
+        :requiresCourse :AdvancedSafetyCourse, :TMKKH, :TMKOH .
+
+    :THOKP0_renew_Requirements a rdf:Alt;
+        rdf:_01 :THOKP0_renew_alt1;
+        rdf:_02 :THOKP0_renew_alt2 .
+
+
+    :THG0_renew_alt1 :renewalRequirementsFor :THG0;
+        :requiresCertificate :HealthCertificate, :THG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_15 .
+
+    :THG0_renew_alt2 :renewalRequirementsFor :THG0;
+        :requiresCertificate :HealthCertificate, :THG0;
+        :requiresCourse :AdvancedSafetyCourse, :TMKGH .
+
+    :THG0_renew_Requirements a rdf:Alt;
+        rdf:_01 :THG0_renew_alt1;
+        rdf:_02 :THG0_renew_alt2 .
+
+    
+
+    :BS0_renew_alt1 :renewalRequirementsFor :BS0;
+        :requiresCertificate :HealthCertificate, :BS0;
+        :requiresCourse :RescueBoatCourse .
+    
+    :BS0_renew_alt2 :renewalRequirementsFor :BS0;
+        :requiresCertificate :HealthCertificate, :BS0;
+        :requiresCourse :BasicSafetyCourse;
+        :requiresCompetancy :UTMOB8;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_18 .
+
+    :BS0_renew_Requirements a rdf:Alt;
+        rdf:_01 :BS0_renew_alt1;
+        rdf:_02 :BS0_renew_alt2 .
+
+    
+    :HMOB0_renew_alt1 :renewalRequirementsFor :HMOB0;
+        :requiresCertificate :HealthCertificate, :HMOB0;
+        :requiresCourse :MedicalCourse .
+
+    :HMOB0_renew_alt2 :renewalRequirementsFor :HMOB0;
+        :requiresCertificate :HealthCertificate, :HMOB0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :requiresCompetancy :UTHMOB;
+        :hasSeagoingServiceRequirement :SeagoingService_renew_18 .
+
+    :HMOB0_renew_Requirements a rdf:Alt;
+        rdf:_01 :HMOB0_renew_alt1;
+        rdf:_02 :HMOB0_renew_alt2 .
+
+###
+# Hvis verdien ikke eksisterer eller er spesifisert er den ubegrenset.
+# Feks hvis :daysSinceCompletion ikke eksisterer er det ingen tidsbegrensning på når fartstiden er fullført.

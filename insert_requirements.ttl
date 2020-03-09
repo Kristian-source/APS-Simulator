@@ -1,0 +1,832 @@
+##################################################################################################
+# Tripletter for sertifikatkrav ved utstedelse av sertifikater for første gang.                     
+#
+##################################################################################################
+
+PREFIX : <https://www.sdir.no/SDIR_Simulator#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+
+# DEKK______________________________________________________________________________
+
+
+    :D10_alt1 :requirementFor :D10;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_D10_alt1, :GMDSSRadioCertificate;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D10, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService1 .
+
+    :D10_alt2 :requirementFor :D10;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_D10_alt2, :GMDSSRadioCertificate;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D10, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService2, :SeagoingService3 .
+
+    :D10_Requirements a rdf:Alt;
+		rdf:_01 :D10_alt1;
+		rdf:_02 :D10_alt2 .
+
+
+
+    :D1BG0_alt1 :requirementFor :D1BG0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate,:Certificatepackage_D1BG0_alt1;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D1BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService4 .
+
+    :D1BG0_alt2 :requirementFor :D1BG0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate,:Certificatepackage_D1BG0_alt1;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D1BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2, :SeagoingService3 .
+
+    :D1BG0_Requirements a rdf:Alt;
+		rdf:_01 :D1BG0_alt1;
+		rdf:_02 :D1BG0_alt2 .
+
+
+
+    :D2B0_alt1 :requirementFor :D2B0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D2B0;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2a .
+
+    :D2B0_Requirements a rdf:Alt;
+        rdf:_01 :D2B0_alt1 .
+
+
+
+    :D2BG0_alt1 :requirementFor :D2BBG0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D2BG0;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D2BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2b .
+
+    :D2BG0_Requirements a rdf:Alt;
+        rdf:_01 :D2BG0_alt1 .
+
+
+
+    :D2A0_alt1 :requirementFor :D2A0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_D2A0_alt1_1,:Certificatepackage_D2A0_alt1_2, :GMDSSRadioCertificate;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        :requiresAttchement "E12:R12Q12D1C12:R12"; #??
+        rdf:label "D2A0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2, :SeagoingService3 .
+
+    :D2A0_alt2 :requirementFor :D2A0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_D2A0_alt2, :GMDSSRadioCertificate;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D2A0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService4 .
+		
+    :D2A0_Requirements a rdf:Alt;
+        rdf:_01 :D2A0_alt1;
+        rdf:_02 :D2A0_alt2 .
+
+
+
+    :D3B0_alt1 :requirementFor :D3B0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :AdvancedSafetyCourse6;
+        rdf:label "D3B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService5 .
+
+    :D3B0_alt2 :requirementFor :D3B0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse, :FAMA;
+        :requiresCompetancy :KADE;
+        rdf:label "D3B0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService6 .
+
+    :D3B0_Requirements a rdf:Alt;
+        rdf:_01 :D3B0_alt1;
+        rdf:_02 :D3B0_alt2 .
+
+
+
+    :D3A0_alt1 :requirementFor :D3A0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D2A0_alt1_1;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3A0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService1 .
+
+    :D3A0_alt2 :requirementFor :D3A0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D2A0_alt1_1, :Certificatepackage_D3A0_alt2_2;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3A0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService2, :SeagoingService3 .
+
+    :D3A0_Requirements a rdf:Alt;
+        rdf:_01 :D3A0_alt1;
+        rdf:_02 :D3A0_alt2 .
+
+
+
+    :D3D0_alt1 :requirementFor :D3D0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D3A0_alt2_2;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D3D0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2c .
+
+    :D3D0_Requirements a rdf:Alt;
+        rdf:_01 :D3D0_alt1 .
+
+
+
+    :D3BG30_alt1 :requirementFor :D3BG30;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate,:Certificatepackage_D2A0_alt1_1, :Certificatepackage_D3A0_alt2_2;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D3BG30, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2d, :SeagoingService3a .
+
+    :D3BG30_alt2 :requirementFor :D3BG30;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :Certificatepackage_D2A0_alt1_1;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D3BG30, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService4a .
+
+    :D3BG30_Requirements a rdf:Alt;
+        rdf:_01 :D3BG30_alt1;
+        rdf:_02 :D3BG30_alt2 .
+
+
+
+    :D3BG0_alt1 :requirementFor :D3BG0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD3;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D3BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService7 .	
+
+    :D3BG0_Requirements a rdf:Alt;
+        rdf:_01 :D3BG0_alt1 .
+
+
+
+    :D4B0_alt1 :requirementFor :D4B0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :ABO;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4B0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService5a .
+
+    :D4B0_alt2 :requirementFor :D4B0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FAMA;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4B0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService6a .
+
+    :D4B0_alt3 :requirementFor :D4B0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4B0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService7a .	
+
+    :D4B0_Requirements a rdf:Alt;
+        rdf:_01 :D4B0_alt1;
+        rdf:_02 :D4B0_alt2;
+        rdf:_03 :D4B0_alt3 .
+
+    
+
+    :D4D0_alt1 :requirementFor :D4D0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :ABO;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D4D0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService5b .
+
+    :D4D0_alt2 :requirementFor :D4D0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FAMA;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D4D0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService6b .
+
+    :D4D0_alt3 :requirementFor :D4D0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D4D0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService7b .
+
+    :D4D0_Requirements a rdf:Alt;
+        rdf:_01 :D4D0_alt1;
+        rdf:_02 :D4D0_alt2;
+        rdf:_03 :D4D0_alt3 .
+
+
+
+    :D4F0_alt1 :requirementFor :D4F0;
+        :age "20"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D4B0;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D4F0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2c .
+
+    :D4F0_Requirements a rdf:Alt;
+        rdf:_01 :D4F0_alt1 .
+
+
+
+    :D50_alt1 :requirementFor :D50;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :ABLO;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D50, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService5a .
+
+    :D50_alt2 :requirementFor :D50;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :FAMA;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse; 
+        rdf:label "D50, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService6a .
+
+    :D50_alt3 :requirementFor :D50;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D50, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService7a .
+
+    :D50_Requirements a rdf:Alt;
+        rdf:_01 :D50_alt1;
+        rdf:_02 :D50_alt2;
+        rdf:_03 :D50_alt3 .
+
+
+
+    :D5F0_alt1 :requirementFor :D5F0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate, :D50;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "D5F0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService2c .
+
+    :D5F0_Requirements a rdf:Alt;
+        rdf:_01 :D5F0_alt1 .
+
+
+
+    :D5BG0_alt1 :requirementFor :D5BG0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :ABLO;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D5BG0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService8 .
+
+    :D5BG0_alt2 :requirementFor :D5BG0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D5BG0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService7b .
+
+    :D5BG0_alt3 :requirementFor :D5BG0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate,:FAMA;
+        :requiresCompetancy :KADE;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "D5BG0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService6b .
+
+    :D5BG0_Requirements a rdf:Alt;
+        rdf:_01 :D5BG0_alt1;
+        rdf:_02 :D5BG0_alt2;
+        rdf:_03 :D5BG0_alt3 .
+
+
+
+    :MATR_alt1 :requirementFor :MATR;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresCompetancy :ABMA;
+        rdf:label "MATR, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService9 .		
+
+    :MATR_alt2 :requirementFor :MATR;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VMATR;
+        rdf:label "MATR, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService10 .		
+
+    :MATR_Requirements a rdf:Alt;
+        rdf:_01 :MATR_alt1;
+        rdf:_02 :MATR_alt2 .
+
+
+
+    :MATRM_alt1 :requirementFor :MATRM;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresCompetancy :ABMA;
+        rdf:label "MATRM, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService9a .
+
+    :MATRM_alt2 :requirementFor :MATRM;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VMATR;
+        :requiresCourse :ShipSecurityCourse;
+        rdf:label "MATRM, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService10a .
+
+    :MATRM_Requirements a rdf:Alt;
+        rdf:_01 :MATRM_alt1;
+        rdf:_02 :MATRM_alt2 .
+
+
+
+# MASKIN OG SKIPSELEKTRIKER ______________________________________________________________________________
+
+    :M1M0_alt1 :requirementFor :M1M0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse,:OGMOH;
+        rdf:label "M1M0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService11 .
+
+    :M1M0_alt2 :requirementFor :M1M0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_M1M0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse,:OGMOH;
+        rdf:label "M1M0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService12, :SeagoingService13 .        
+
+    :M1M0_Requirements a rdf:Alt;
+        rdf:_01 :M1M0_alt1;
+        rdf:_02 :M1M0_alt2 .
+
+
+
+    :M2AM0_alt1 :requirementFor :M2AM0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VM2;
+        :requiresCertificate :Certificatepackage_M1M0;
+        rdf:label "M2AM0, alternatv 1";
+		:hasSeagoingServiceRequirement :SeagoingService12 .
+
+    :M2AM0_Requirements a rdf:Alt;
+        rdf:_01 :M2AM0_alt1 .
+
+
+
+    :M3AM0_alt1 :requirementFor :M3AM0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_M3AM0;
+        :requiresEducation :VM2;
+        :requiresCourse :AdvancedSafetyCourse, :OGMOH;
+        rdf:label "M3AM0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService12 .
+
+    :M3AM0_Requirements a rdf:Alt;
+        rdf:_01 :M3AM0_alt1 .
+
+
+
+    :M4M0_alt1 :requirementFor :M4M0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :OGMOH;
+        :requiresCompetancy :ABO;
+        rdf:label "M4M0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService14 .        
+
+    :M4M0_alt2 :requirementFor :M4M0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :OGMOH;
+        :requiresCompetancy :KAMA;
+        rdf:label "M4M0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService15 .        
+
+    :M4M0_alt3 :requirementFor :M4M0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :OGMOH, :FMO;
+        :requiresCompetancy :KAMA;
+        rdf:label "M4M0, alternativ 3";
+		:hasSeagoingServiceRequirement :SeagoingService16 .        
+    
+    :M4M0_Requirements a rdf:Alt;
+        rdf:_01 :M4M0_alt1;
+        rdf:_02 :M4M0_alt2;
+        rdf:_03 :M4M0_alt3 .
+
+
+
+    :M4AM0_alt1 :requirementFor :M4AM0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :M4M0;
+        :requiresEducation :VM4;
+        :requiresCourse :AdvancedSafetyCourse, :OGMOH;
+        rdf:label "M4AM0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService12 .
+
+    :M4AM0_Requirements a rdf:Alt;
+        rdf:_01 :M4AM0_alt1 .
+    
+    
+    
+    :MOT_alt1 :requirementFor :MOT;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :MOT;
+        rdf:label "MOT, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService17 .       
+
+    :MOT_alt2 :requirementFor :MOT;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :MOT;
+        :requiresCompetancy :ABMO;
+        rdf:label "MOT, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService18 .       
+    
+    :MOT_Requirements a rdf:Alt;
+        rdf:_01 :MOT_alt1;
+        rdf:_02 :MOT_alt2 .
+
+
+
+    :MOTM_alt1 :requirementFor :MOTM;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :MOT;
+        :requiresCourse :ShipSecurityCourse;
+        rdf:label "MOTM, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService17 .
+
+    :MOTM_alt2 :requirementFor :MOTM;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :MOT;
+        :requiresCourse :ShipSecurityCourse;
+        :requiresCompetancy :ABMO;
+        rdf:label "MOTM, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService18 .
+
+    :MOTM_Requirements a rdf:Alt;
+        rdf:_01 :MOTM_alt1;
+        rdf:_02 :MOTM_alt2 .
+
+
+
+    :SEOF0_ETO_alt1 :requirementFor :SEOF0_ETO;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse, :OGSEL, :FSEO;
+        rdf:label "SEOF0 (ETO), alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService19 .
+        
+    :SEOF0_ETO_alt2 :requirementFor :SEOF0_ETO;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VETO;
+        :requiresCourse :AdvancedSafetyCourse, :OGSEL, :FSEO;
+        rdf:label "SEOF0 (ETO), alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService20 .        
+
+    :SEOF0_Requirements a rdf:Alt;
+        rdf:_01 :SEOF0_ETO_alt1;
+        rdf:_02 :SEOF0_ETO_alt2 .
+
+
+
+    :SEL0_alt1 :requirementFor :SEL0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :ETR;
+        rdf:label "SEL0 (ETR), alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService21 .
+
+    :SEL0_Requirements a rdf:Alt;
+        rdf:_01 :SEL0_alt1 .
+
+
+
+# FISK ______________________________________________________________________________
+
+    :FSAA0_alt1 :requirementFor :FSAA0;
+        :age "19"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :GMDSSRadioCertificate;
+        :requiresEducation :VD2;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSAA0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService22 .        
+
+    :FSAA0_Requirements a rdf:Alt;
+        rdf:_01 :FSAA0_alt1 .
+
+
+
+    :FSAB1_alt1 :requirementFor :FSAB1;
+        :age "19"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VD4;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSAA0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService23, :SeagoingService24 .
+
+    :FSAB1_Requirements a rdf:Alt;
+        rdf:_01 :FSAB1_alt1 .
+
+
+
+    :FSB0_alt1 :requirementFor :FSB0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :FSC0;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSB0, alternativ 1";
+		:hasSeagoingServiceRequirement :SeagoingService23a, :SeagoingService24a .        
+
+    :FSB0_alt2 :requirementFor :FSB0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresEducation :VD5;
+        :requiresCourse :AdvancedSafetyCourse, :MedicalCourse;
+        rdf:label "FSB0, alternativ 2";
+		:hasSeagoingServiceRequirement :SeagoingService23, :SeagoingService24 .
+        
+
+    :FSB0_Requirements a rdf:Alt;
+        rdf:_01 :FSB0_alt1;
+        rdf:_02 :FSB0_alt2 .
+
+
+
+    :FSC0_alt1 :requirementFor :FSC0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :SRC;
+        :requiresEducation :Educationpackage1;
+        :requiresCourse :BasicSafetyCourse;
+        rdf:label "FSC0, alternativ 1";
+        :hasSeagoingServiceRequirement :SeagoingService25 .
+
+    :FSC0_Requirements a rdf:Alt;
+        rdf:_01 :FSC0_alt1 .
+
+
+
+# ANDRE (ferdighetssertifikat) ______________________________________________________________________________
+
+    :POLV_alt1 :requirementFor :POLV;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :POLA, :POLB; #:PolarCourse
+        :requiresCompetancy :POL;
+        rdf:label "POLV, alternativ 1";
+        :hasSeagoingServiceRequirement :SeagoingService26 .       
+
+    :POLV_alt2 :requirementFor :POLV;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :POLA, :POLB; #:PolarCourse, :POL
+        :requiresCompetancy :POL; #fartstid i polare farvann
+        :hasAttachement :NationalCertificate; #??
+        rdf:label "POLV, alternativ 2 (utenlandsk)";
+        :hasSeagoingServiceRequirement :SeagoingService26 .
+
+    :POLV_Requirements a rdf:Alt;
+        rdf:_01 :POLV_alt1;
+        rdf:_02 :POLV_alt2 .
+
+
+
+    :IGFG_alt1 :requirementFor :IGFG;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :IGFB;
+        rdf:label "IGFG, alternativ 1" .
+
+    :IGFG_alt2 :requirementFor :IGFG;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_IGFG;
+        :requiresCourse :AdvancedSafetyCourse;
+        rdf:label "IGFG, alternativ 2".
+
+    :IGFG_Requirements a rdf:Alt;
+        rdf:_01 :IGFG_alt1;
+        rdf:_02 :IGFG_alt2 .
+
+
+
+    :IGFV_alt1 :requirementFor :IGFV;
+        :requiresCertificate :HealthCertificate, :IGFG;
+        :requiresCourse :AdvancedSafetyCourse, :IGFA;
+        :requiresCompetancy :BUNK3;
+        :hasSeagoingServiceRequirement :SeagoingService27 .
+        
+    :IGFV_alt2 :requirementFor :IGFV;
+        :requiresCertificate :HealthCertificate, :THG0;
+        :requiresCourse :AdvancedSafetyCourse;
+        :requiresCompetancy :BUNK3;
+        :hasSeagoingServiceRequirement :SeagoingService28 .     
+
+    :IGFV_Requirements a rdf:Alt;
+        rdf:_01 :IGFV_alt1;
+        rdf:_02 :IGFV_alt2 .
+
+
+
+    :TLOK0_alt1 :requirementFor :TLOK0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKOKL .
+
+    :TLOK0_alt2 :requirementFor :TLOK0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse;
+        :requiresCompetancy :GOLALO;
+        :hasSeagoingServiceRequirement :SeagoingService28a .
+
+    :TLOK0_Requirements a rdf:Alt;
+        rdf:_01 :TLOK0_alt1;
+        rdf:_02 :TLOK0_alt2 .
+
+    
+
+    :THO0_alt1 :requirementFor :THO0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKOH;
+        :hasSeagoingServiceRequirement :SeagoingService28b .
+
+    :THO0_Requirements a rdf:Alt;
+        rdf:_01 :THO0_alt1 .
+
+
+
+    :THOKP0_alt1 :requirementFor :THOKP0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKKH, :TMKOH;
+        :hasSeagoingServiceRequirement :SeagoingService28a .
+
+    :THOKP0_Requirements a rdf:Alt;
+        rdf:_01 :THOKP0_alt1 .
+
+
+
+    :THK0_alt1 :requirementFor :THK0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKKH;
+        :hasSeagoingServiceRequirement :SeagoingService28c .
+
+    :THK0_Requirements a rdf:Alt;
+        rdf:_01 :THK0_alt1 .
+
+
+    :TLG0_alt1 :requirementFor :TLG0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKGL .
+
+    :TLG0_alt2 :requirementFor :TLG0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse;
+        :requiresCompetancy :GOLALO;
+        :hasSeagoingServiceRequirement :SeagoingService28d .       
+
+    :TLG0_Requirements a rdf:Alt;
+        rdf:_01 :TLG0_alt1;
+        rdf:_02 :TLG0_alt2 .
+
+    
+
+    :THG0_alt1 :requirementFor :THG0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :AdvancedSafetyCourse, :TMKGL;
+        :hasSeagoingServiceRequirement :SeagoingService29 .        
+
+    :THG0_alt2 :requirementFor :THG0;
+        :requiresCertificate :HealthCertificate, :TLG0;
+        :requiresCourse :AdvancedSafetyCourse, :TMKGL;
+        :hasSeagoingServiceRequirement :SeagoingService30 .        
+
+    :THG0_Requirements a rdf:Alt;
+        rdf:_01 :THG0_alt1;
+        rdf:_02 :THG0_alt2 .
+
+
+
+    :BV0_alt1 :requirementFor :BV0;
+        :age "16"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresCompetancy :BVSJEKK;
+        :hasSeagoingServiceRequirement :SeagoingService31 .        
+
+    :BV0_alt2 :requirementFor :BV0;
+        :age "16"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate;
+        :requiresCompetancy :BVSJEKK;
+        :hasSeagoingServiceRequirement :SeagoingService31 .
+
+    :BV0_Requirements a rdf:Alt;
+        rdf:_01 :BV0_alt1;
+        rdf:_02 :BV0_alt2 .
+
+    
+
+    :BS0_alt1 :requirementFor :BS0;
+        :requiresCertificate :HealthCertificate;
+        :requiresCourse :RescueBoatCourse;
+        :hasSeagoingServiceRequirement :SeagoingService32.
+
+    :BS0_Requirements a rdf:Alt;
+        rdf:_01 :BS0_alt1 .
+
+
+
+    :HMOB0_alt1 :requirementFor :HMOB0;
+        :age "18"^^xsd:minInclusive;
+        :requiresCertificate :HealthCertificate, :Certificatepackage_HMOB0;
+        :requiresCourse :FastRescueBoatCourse .
+
+    :HMOB0_Requirements a rdf:Alt;
+        rdf:_01 :HMOB0_alt1 .
+
+
+
+    :ASS0_alt1 :requirementFor :ASS0;
+        :requiresCourse :AdvancedSafetyCourse0;
+        :requiresCertificate :Certificatepackage_ASS0 .
+
+    :ASS0_alt2 :requirementFor :ASS0;
+        :requiresCertificate :Certificatepackage_ASS0;
+        :hasAttachement :OneYearStudyInPedagogy . #??
+
+    :ASS0_Requirements a rdf:Alt;
+        rdf:_01 :ASS0_alt1;
+        rdf:_02 :ASS0_alt2 .
+
+
+###
+# Hvis verdien ikke eksisterer eller er spesifisert er den ubegrenset.
+# Feks hvis :daysSinceCompletion ikke eksisterer er det ingen tidsbegrensning på når fartstiden er fullført.

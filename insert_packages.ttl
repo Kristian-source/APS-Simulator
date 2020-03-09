@@ -1,0 +1,301 @@
+##################################################################################################
+# Tripletter for sertifikat- og kurskravpakker.                      
+#
+##################################################################################################
+
+prefix : <https://www.sdir.no/SDIR_Simulator#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+
+### ___________________Course Packages:______________________________________
+
+ :Coursepackage1 	a 	rdf:Alt; #AdvancedSafetyCourse
+				rdf:label "VSKR, VSK eller OGD";
+    			rdf:_01 :VSKR;
+    			rdf:_02 :VSK;
+    			rdf:_03 :OGD .
+  
+ :Coursepackage2 	a 	rdf:Alt; #AdvancedSafetyCourse
+ 				rdf:label "GSKR, GSK, VSK, VSKR eller OGD";
+    			rdf:_01 :GSKR;
+    			rdf:_02 :VSK;
+    			rdf:_03 :VSKR;
+    			rdf:_04	:OGD;
+				rdf:_05 :GSK .
+  
+ :Coursepackage3 	a 	rdf:Alt; #ShipSecurityCourse
+				rdf:label "SP / SB";
+      			rdf:_01 :SP;
+      			rdf:_02 :SB .
+  
+ :Coursepackage4 	a 	rdf:Alt; #AdvancedSafetyCourse
+				rdf:label "VSK, VSKR eller OGM";
+    			rdf:_01 :OGM;
+    			rdf:_02 :VSK;
+    			rdf:_03 :VSKR .
+  
+ :Coursepackage5 	a 	rdf:Alt; #BasicSafetyCourse
+    			rdf:_01 :SOF;
+    			rdf:_02 :SOF0;
+    			rdf:_03 :GSK;
+    			rdf:_04	:GSKR .
+  
+ :Coursepackage6 	a 	rdf:Alt; #AdvancedSafetyCourse
+				rdf:label "GSKR, GSK, VSK eller VSKR";
+    			rdf:_01 :GSKR;
+    			rdf:_02 :VSK;
+    			rdf:_03 :VSKR;
+    			rdf:_04	:GSK .
+  
+ :Coursepackage8 	a 	rdf:Alt; #RescueBoatCourse
+				rdf:label "LBR eller LB";
+    			rdf:_01 :LBR;
+    			rdf:_02 :LB .
+  
+ :Coursepackage9	a 	rdf:Alt; #FastRescueBoatCourse
+				rdf:label "HMOB eller HMOBR";
+    			rdf:_01 :HMOB;
+    			rdf:_02 :HMOBR .
+  
+ :Coursepackage10 	a 	rdf:Alt; # ikke i bruk?
+				rdf:label "ASS eller ASS0";
+    			rdf:_01 :ASS;
+    			rdf:_02 :ASS0 .
+
+ :Coursepackage11 	a 	rdf:Alt; # ikke i bruk?
+    			rdf:_01 :SOF;
+    			rdf:_02 :SOF0 .
+  
+:Coursepackage12 	a 	rdf:Alt; #MedicalCourse
+    			rdf:_01 :MBH;
+    			rdf:_02 :MBHR .
+  
+:Coursepackage13 	a 	rdf:Alt; #AdvancedSafetyCourse
+    			rdf:_01 :VSKR;
+    			rdf:_02 :VSK .
+
+:Coursepackage14 	a 	rdf:Alt; #BasicSafetyCourse
+    			rdf:_01 :GSKR;
+    			rdf:_02 :GSK .
+  
+:Coursepackage15 	a 	rdf:Alt; #MedicalCourse
+				rdf:label "MBHR, MBH eller OGD";
+    			rdf:_01	:MBHR;
+    			rdf:_02 :MBH;
+    			rdf:_03 :OGD .
+
+:Coursepackage16 	a 	rdf:Alt; # ikke i bruk?
+				rdf:label "ABL eller ABO";
+    			rdf:_01 :ABL;
+    			rdf:_02 :ABO .
+
+:Coursepackage17	a 	rdf:Alt; #ProfessionalCompetenceOfficerCourse
+				rdf:_01 :VYD;
+				rdf:_02 :PYKD .
+
+:Coursepackage18	a 	rdf:Alt; #AdvancedSafetyCourse
+				rdf:_01 :VSKR;
+				rdf:_02 :VSK;
+				rdf:_03 :OGD;
+				rdf:_04 :SOF;
+				rdf:_05 :SOFO;
+				rdf:_06 :GSKR;
+				rdf:_07 :GSK .
+
+
+### ___________________Certificate Packages:______________________________________
+
+:Certificatepackage_Radio	a	rdf:Alt; #GMDSSRadioCertificate
+					rdf:label "ROC eller GOC";
+    				rdf:_01	:ROC;
+  					rdf:_02	:GOC .
+
+:Certificatepackage_Radio_FC	a	rdf:Alt; #RadioOperatorCertificate
+					rdf:label "ROC, GOC eller SRC";
+    				rdf:_01	:ROC;
+  					rdf:_02	:GOC;
+					rdf:_03 :SRC .
+  
+:Certificatepackage_D10_alt1	a	rdf:Alt;
+					rdf:label "D3A0/D3BO/D3D0/D2A0/D2B0/D4B0/D4F0";
+    				rdf:_01	:D3A0;
+  					rdf:_02	:D2B0;
+					rdf:_03 :D3D0;
+					rdf:_04 :D3BO;
+					rdf:_05 :D4B0;
+					rdf:_06 :D4F0 .
+  
+:Certificatepackage_D1BG0_alt1	a	rdf:Alt;
+					rdf:label "D2BO/D2BGO/D2A0/D3BO/D3BG0/D3BG30/D3A0/D4B0/D4D0/D4F0";
+    				rdf:_01	:D2A0;
+  					rdf:_02	:D2BO;
+    				rdf:_03	:D2BGO;
+    				rdf:_04 :D3BO;
+					rdf:_05 :D3BG0;
+					rdf:_06 :D3BG30;
+					rdf:_07 :D3A0;
+					rdf:_08 :D4B0;
+					rdf:_09 :D4D0;
+					rdf:_10 :D4F0 .
+
+:Certificatepackage_D1BG0_alt2 a rdf:Alt;
+					rdf:label "D2BO/D2BGO/D2A0/D3BO/D3BG0/D3BG30/D3A0";
+					rdf:_01 :D2BO;
+					rdf:_02 :D2BGO;
+					rdf:_03 :D2A0;
+					rdf:_04 :D3BO;
+					rdf:_05 :D3BG0;
+					rdf:_06 :D3BG0;
+					rdf:_07 :D3BG30;
+					rdf:_08 :D3A0 .
+  
+:Certificatepackage_D10_alt2	a	rdf:Alt;
+					rdf:label "D3A0/D3BO/D2A0/D2B0";
+    				rdf:_01	:D3A0;
+  					rdf:_02	:D2BO;
+    				rdf:_03	:D2A0;
+    				rdf:_04 :D3BO .
+  
+:Certificatepackage_D2B0	a	rdf:Alt;
+					rdf:label "D3B0 / D3A0/D3D0/D4B0/D4F0";
+    				rdf:_01 :D3B0;
+					rdf:_02	:D3A0;
+  					rdf:_03	:D3D0;
+					rdf:_04 :D4B0;
+    				rdf:_05	:D4F0 .
+    				
+
+:Certificatepackage_D2BG0	a	rdf:Alt;
+					rdf:label "D3BG0 / D3D0 / D3B0 / D3A0/ D4B0 / D4F0 / D4D0";
+    				rdf:_01	:D3BG0;
+  					rdf:_02	:D3D0;
+    				rdf:_03	:D3A0;
+    				rdf:_04 :D4B0;
+					rdf:_05 :D4F0;
+					rdf:_06 :D4D0 .
+  
+:Certificatepackage_D2A0_alt1_1	a	rdf:Alt;
+					rdf:label "D3B0 / D3A0  / D4A0";
+    				rdf:_01	:D4B0;
+  					rdf:_02	:D4F0;
+    				rdf:_03	:D4A0 .
+  
+:Certificatepackage_D2A0_alt1_2	a	rdf:Alt;
+					rdf:label "D3B0 / D3A0 / D4A0";
+    				rdf:_01	:D3B0;
+  					rdf:_02	:D3A0;
+    				rdf:_03	:D4A0 .
+
+:Certificatepackage_D2A0_alt2	a	rdf:Alt;
+					rdf:label "D4B0 / D4F0 / D4A0 / D3B0 / D3A0 ";
+    				rdf:_01	:D4B0;
+  					rdf:_02	:D4F0;
+    				rdf:_03	:D4A0;
+					rdf:_04 :D3B0;
+					rdf:_05 :D3A0 .
+
+:Certificatepackage_D3A0_alt2_2	a	rdf:Alt;
+					rdf:label "D3B0 / D3D0 / D4A0";
+    				rdf:_01	:D3B0;
+  					rdf:_02	:D3D0;
+    				rdf:_03	:D4A0 .
+  
+:Certificatepackage_M1M0	a	rdf:Alt;
+					rdf:label "M4M0 /M3AM0 /  M2AM0";
+    				rdf:_01	:M4M0;
+  					rdf:_02	:M3AM0;
+    				rdf:_03	:M2AM0 .
+  
+:Certificatepackage_M3AM0	a	rdf:Alt;
+					rdf:label "M4M0/M4AM0";
+    				rdf:_01	:M4M0;
+  					rdf:_02	:VM3AM0 .
+  
+:Certificatepackage_IGFG	a	rdf:Alt;
+					rdf:label "THG0 /TLG0";
+    				rdf:_01	:THG0;
+  					rdf:_02	:TLG0 .
+  
+:Certificatepackage_HMOB0	a	rdf:Alt;
+					rdf:label "BS0 or all deck, machine or fish courses";
+    				rdf:_01	:BS0;
+  					rdf:_02	:D10;
+					rdf:_02	:D1BG0;
+					rdf:_02	:D2B0;
+					rdf:_02	:D2BG0;
+					rdf:_02	:D2A0;
+					rdf:_02	:D3B0;
+					rdf:_02	:D3A0;
+					rdf:_02	:D3D0;
+					rdf:_02	:D3BG30;
+					rdf:_02	:D3BG0;
+					rdf:_02	:D4B0;
+					rdf:_02	:D4D0;
+					rdf:_02	:D50;
+					rdf:_02	:D5F0;
+					rdf:_02	:D5BG0;
+					rdf:_02	:MATR;
+					rdf:_02	:MATRM;
+    				rdf:_03	:M1M0;
+					rdf:_03	:M2AM0;
+					rdf:_03	:M3AM0;
+					rdf:_03	:M4M0;
+					rdf:_03	:M4AM0;
+					rdf:_03	:MOT;
+					rdf:_03	:MOTM;
+					rdf:_03	:SEOF0;
+					rdf:_03	:SEL0;
+    				rdf:_04 :FSAA0;
+					rdf:_04 :FSAB1;
+					rdf:_04 :FSB0;
+					rdf:_04 :FSC0 .
+
+:Certificatepackage_ASS0 a rdf:Alt;
+					rdf:label "D1, D2, M1, M2, ETO or FSAA0";
+					rdf:_01 :D1;
+					rdf:_02 :D2;
+					rdf:_03 :M1;
+					rdf:_04 :M2;
+					rdf:_05 :ETO;
+					rdf:_06 :FSAA0 .
+
+:Certificatepackage_Fish_renewal a rdf:Alt;
+					rdf:_01 :VYD;
+					rdf:_02 :PYKD .
+
+### ___________________ Other Packages: ______________________________________
+
+:Educationpackage1 a rdf:Alt;
+	rdf:label "D5L eller VD5";
+	rdf:_01 :D5L;
+	rdf:_02 :VD5 .
+
+:ShipTypepackage1 a rdf:Alt; #OilChemicalTanker
+	rdf:_01 :ChemicalTanker;
+	rdf:_02 :OilTanker .
+
+:Occupationpackage1 a rdf:Alt;
+	rdf:_01 :ChiefOfficer;
+	rdf:_02 :AbleSeafarer;
+	rdf:_03 :Radiooperator_ship;
+	rdf:_04 :OrdinarySeafarer;
+	rdf:_05 :Master;
+	rdf:_06 :ShipElectrician;
+	rdf:_07 :ShipElectricianOfficer;
+	rdf:_08 :ChiefEngineer;
+	rdf:_09 :SecondEngineer;
+	rdf:_10 :Engineer;
+	rdf:_11 :AbleSeafarer_engine;
+	rdf:_12 :Oiler_ship .
+
+:Occupationpackage2 a rdf:Alt;
+	rdf:_01 :AbleSeafarerApprentice_deck;
+	rdf:_02 :AbleSeafarerApprentice_engine;
+	rdf:_03 :Cadet_deck;
+	rdf:_04 :Cadet_engine .
+
+:Occupationpackage3 a rdf:Alt; #DeckCrewOccupation
+	rdf:_01 :DeckCrewOccupation .

@@ -1,0 +1,514 @@
+prefix : <https://www.sdir.no/SDIR_Simulator#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX xml: <http://www.w3.org/XML/1998/namespace> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/alternative>
+
+
+    :D10_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart.
+
+	:D10 :givesRight :D10_right1;
+        rdf:label "D10 gir rettighetene ... " .
+
+
+    :D2B0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :UinnskrenketFart .
+
+    :D2B0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart .
+
+    :D2B0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart .
+
+    :D2B0 :givesRight :D2B0_right1, :D2B0_right2, :D2B0_right3;
+        rdf:label "D2B0 gir rettighetene ... " .
+
+
+    :D2BG0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+    
+    :D2BG0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D2BG0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D2BG0 :givesRight :D2BG0_right1, :D2BG0_right2, :D2BG0_right3;
+        rdf:label "D2BG0 gir rettighetene ... " .
+
+
+    :D2A0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+    
+    :D2A0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinskrenketFart .
+
+    :D2A0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinskrenketFart .
+
+    
+    :D2A0 :givesRight :D2A0_right1, :D2A0_right2, :D2A0_right3;
+        rdf:label "D2A0 gir rettighetene ... " .
+
+
+
+        
+    :D3B0_right1 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+
+    :D3B0_right2 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinskrenketFart .
+
+    
+    :D3B0 :givesRight :D3B0_right1, :D3B0_right2;
+        rdf:label "D3B0 gir rettighetene ... " .
+
+
+
+    :D3A0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+    
+    :D3A0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+
+    :D3A0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinskrenketFart .
+
+    :D3A0 :givesRight :D3A0_right1, :D3A0_right2, :D3A0_right3;
+        rdf:label "D3A0 gir rettighetene ... " .
+
+
+    :D3D0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+    
+    :D3D0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :UinskrenketFart .
+
+    :D3D0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinskrenketFart .
+
+    
+    :D3D0 :givesRight :D3D0_right1, :D3D0_right2, :D3D0_right3;
+        rdf:label "D3D0 gir rettighetene ... " .
+
+    
+
+
+
+    :D3BG30_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D3BG30_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D3BG30_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    
+    :D3BG30 :givesRight :D3D0_right1, :D3D0_right2, :D3D0_right3;
+        rdf:label "D3BG30 gir rettighetene ... " .     
+
+
+    
+
+    :D3BG0_right1 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "3000"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D3BG0_right2 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    
+    :D3BG0 :givesRight :D3BG0_right1, :D3BG0_right2;
+        rdf:label "D3BG0 gir rettighetene ... " .    
+
+
+
+
+    :D4B0_right1 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :Nord-OgØstersjøfart .
+
+    :D4B0_right2 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart .
+
+    :D4B0 :givesRight :D4B0_right1, :D4B0_right2;
+        rdf:label "D4B0 gir rettighetene ... " .
+
+
+
+
+    
+    :D4D0_right1 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D4D0_right2 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D4D0 :givesRight :D4D0_right1, :D4D0_right2;
+        rdf:label "D4D0 gir rettighetene ... " .
+
+
+
+    :D4F0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :Nord-OgØstersjøfart  .
+    
+    :D4F0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :Nord-OgØstersjøfart  .
+
+    :D4F0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :Nord-OgØstersjøfart  .
+
+    :D4F0 :givesRight :D4F0_right1, :D4F0_right2, :D4F0_right3;
+        rdf:label "D4F0 gir rettighetene ... " .
+
+
+
+    :D50_right1 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :Nord-OgØstersjøfart .
+
+    :D50_right2 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :UinnskrenketFart .
+
+    :D50 :givesRight :D50_right1, :D50_right2;
+        rdf:label "D50 gir rettighetene ... " .
+
+
+    :D5F0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :Nord-OgØstersjøfart  .
+
+    :D5F0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :Nord-OgØstersjøfart  .
+
+    :D5F0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :Nord-OgØstersjøfart  .
+
+    :D5F0 :givesRight :D5F0_right1, :D5F0_right2, :D5F0_right3;
+        rdf:label "D5F0 gir rettighetene ... " .
+
+
+
+    :D5BG0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+    
+    :D5BG0_right2 a :Right;
+        :asOccupation :ChiefOfficer;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D5BG0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "500"^^xsd:maxInclusive;
+        :inTradeArea :2BeskyttetFarvann .
+
+    :D5BG0 :givesRight :D5BG0_right1, :D5BG0_right2, :D5BG0_right3;
+        rdf:label "D5BG0 gir rettighetene ... " .
+
+
+    :FSAA0_right1 a :Right;
+        :asOccupation :Shipmaster;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart;
+        :onShipType :FishingVessel .
+
+     :FSAA0_right2 a :Right;
+        :asOccupation :ChiefOffiser;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart;
+        :onShipType :FishingVessel .
+
+        :FSAA0_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart;
+        :onShipType :FishingVessel .
+
+    :FSAA0 :givesRight :FSAA0_right1, :FSAA0_right2, :FSAA0_right3;
+        rdf:label "FSAA0 gir rettighetene ... " .
+
+
+
+    :FSAB1_right1 a :Right;
+    	:asOccupation :Shipmaster;
+    	:vesselWeightOverall "3000"^^xsd:maxInclusive;
+    	:inTradeArea :UinnskrenketFart;
+    	:onShipType :FishingVessel .
+
+
+    :FSAB1_right2 a :Right;
+    	:asOccupation :ChiefOffiser;
+    	:vesselWeightOverall "Unlimited";
+    	:inTradeArea :UinnskrenketFart;
+    	:onShipType :FishingVessel .
+
+
+    	:FSAB1_right3 a :Right;
+        :asOccupation :Mate;
+        :vesselWeightOverall "Unlimited";
+        :inTradeArea :UinnskrenketFart;
+        :onShipType :FishingVessel .
+
+
+     :FSAB1 :givesRight :FSAB1_right1, :FSAB1_right2, :FSAB1_right3;
+        rdf:label "FSAB1 gir rettighetene ... " .
+
+
+
+
+    :FSC0_rights1 a :Right;
+    	:asOccupation :Shipmaster;
+    	:vesselLengthOverall "15"^^xsd:maxInclusive;
+    	:inTradeArea :BankFishing1;
+    	:onShipType :FishingVessel .
+
+    :FSC0_right2 a :Right;
+    	:asOccupation :ChiefOffiser;
+    	:vesselLengthOverall "24"^^xsd:maxInclusive;
+    	:inTradeArea :BankFishing1;
+    	:onShipType :FishingVessel .
+
+    :FSC0 :givesRight :FSC0_right1, :FSC0_right2;
+        rdf:label "FSC0 gir rettighetene ... " .
+
+
+
+
+	:M1M0_right1 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "Unlimited" .
+   
+    :M1M0_right2 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "Unlimited" .
+
+    :M1M0_right3 a :Right;
+        :asOccupation :Machinist;
+        :machineForce "Unlimited" .
+
+    :M1M0 :givesRight :M1M0_right1, :M1M0_right2, :M1M0_right3;
+        rdf:label "M1M0 gir rettighetene ... " .  
+
+
+
+
+    :M2A0_right1 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "3000"^^xsd:maxInclusive .
+
+    :M2A0_right2 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "Unlimited"^^xsd:String;
+        :onShipType :FishingVessel .
+
+
+    :M2A0_right3 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "Unlimited" .
+
+    :M2A0_rights4 a :Right;
+        :asOccupation :Machinist;
+        :machineForce "Unlimited" .
+
+    :M2A0 :givesRight :M2A0_right1, :M2A0_right2, :M2A0_right3, :M2A0_right4;
+        rdf:label "M2A0 gir rettighetene...".
+
+
+
+    :M2AM0_right1 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "750"^^xsd:maxInclusive .
+
+    :M2AM0_right2 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "3000"^^xsd:maxInclusive;
+        :onShipType :FishingVessel .
+    
+    :M2AM0_right3 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "Unlimited" .
+
+    :M2AM0_right4 a :Right;
+        :asOccupation :Machinist;
+        :machineForce "Unlimited" .
+
+    :M2AM0 :givesRight :M2AM0_right1, :M2AM0_right2, :M2AM0_right3, :M2AM0_right4;
+        rdf:label "M2M0 gir rettighetene ... " .  
+
+
+
+
+    :M3AM0_right1 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "3000"^^xsd:maxInclusive .
+
+    :M3AM0_right2 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "3000"^^xsd:maxInclusive;
+        :onShipType :FishingVessel .
+   
+
+    :M3AM0_right3 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "3000" .
+
+
+    :M3AM0_right4 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "3000"^^xsd:maxInclusive;
+        :onShipType :FishingVessel .
+
+    :M3AM0_right5 a :Right;
+        :asOccupation :Machinist;
+        :machineForce "Unlimited" .
+
+    :M3AM0 :givesRight :M3AM0_right1, :M3AM0_right2, :M3AM0_right3, :M3AM0_right4, :M3AM0_right5;
+        rdf:label "M3AM0 gir rettighetene ... " .  
+
+
+
+    :M4M0_right1 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "750"^^xsd:maxInclusive .
+
+    :M4M0_right2 a :Right;
+        :asOccupation :ChiefEngineer;
+        :machineForce "1000"^^xsd:maxInclusive;
+        :onShipType :FishingVessel .
+    
+    :M4M0_right3 a :Right;
+        :asOccupation :FirstMachinist;
+        :machineForce "750"^^xsd:maxInclusive .
+
+    :M4M0_right4 a :Right;
+        :asOccupation :FirstMachinist;
+        :onShipType :FishingVessel;
+        :machineForce "Unlimited" .
+
+    :M4M0_right5 a :Right;
+        :asOccupation :Machinist;
+        :machineForce "Unlimited" .
+
+    :M4M0 :givesRight :M4M0_right1, :M4M0_right2, :M4M0_right3, :M4M0_right4, :M4M0_right5;
+        rdf:label "M4M0 gir rettighetene ... " .   
+
+
+
+    :SEOF0_right1 a :Right;
+     	:asOccupation :SkipselektrikkerOfficer;
+     	:voltage "Unlimited" .
+
+    :SEOF0 :givesRight :SEOF0_right1;
+     	rdf:label "SEOF0 gir rettighetene..." .
+
+
+    :SEL0_right1 a :Right;
+    	:asOccupation :Skipselektriker;
+    	:voltage "999"^^xsd:maxInclusive .
+
+    :SEL0 :givesRight :SEL0_right1;
+     	rdf:label "SEL0 gir rettighetene..." .
+
+
+    :MOT_right1 a :Right;
+    	:asOccupation	:Motormann;
+    	:machineForce "Unlimited" .
+
+    :MOT :givesRight :MOT_right1;
+    	rdf:label "MOT gir rettghetene ..." .
+
+
+	:MATR_right1 a :Right;
+    	:asOccupation	:Matros;
+    	:vesselWeightOverall "Unlimited" .
+
+    :MATR :givesRight :MATR_right1;
+    	rdf:label "MATR gir rettghetene ..." .
+
+
+	:MATRM_right1 a :Right;
+    	:asOccupation	:Matros;
+    	:vesselWeightOverall "Unlimited" .
+
+    :MATRM :givesRight :MATRM_right1;
+    	rdf:label "MATRM gir rettghetene ..." .
+
+
+    :POLG_right1 a :Right;
+    	:asOccupation :POL;
+    	:onShipType :Ice-covered_waters_I .
+
+    :POLG :givesRight :POLG_right1;
+    	rdf:label "POLG gir rettghetene ..." .
