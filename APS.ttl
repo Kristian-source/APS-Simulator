@@ -19,9 +19,9 @@
                                       <http://purl.org/dc/terms/source> "https://lovdata.no/dokument/SF/forskrift/2011-12-22-1523/"@no ;
                                       <http://purl.org/dc/terms/title> "Automatisering av Personellsertifikater (APS)" .
 
-##################################################################
+#################################################################
 #    Annotation properties
-##################################################################
+#################################################################
 
 ###  http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
